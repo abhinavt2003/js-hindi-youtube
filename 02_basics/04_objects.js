@@ -78,9 +78,9 @@ const {courseInstructor: instructor} = course // courseInstructor: instructor hm
 console.log(instructor);
 
 //Methods in React
-const navbar1 = (props.company) => {
+// const navbar1 = (props.company) => {
 
-}
+// }
 const navbar2= ({company}) => {
 
 }
@@ -102,4 +102,11 @@ navbar(company= "hitesh")
 //     coursename:"js in hindi",
 //     price: "free"
 // }
+
+//Somrtimes we get API in the form of arrays too
+[
+    {},
+    {},
+    {}
+]
 
