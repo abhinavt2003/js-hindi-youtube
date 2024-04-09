@@ -94,7 +94,7 @@ navbar(company= "hitesh")
 //API kuch nhi hai kuch values hai jo Backend se aati hai phle wo XML me aati thi jo ki bhot complex hai, ab values aati hai JSON me
 
 {
-    //JSON 
+    //JSON (JavaScript Object Notation)
 }
 
 // {
