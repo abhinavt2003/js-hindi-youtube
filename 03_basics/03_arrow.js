@@ -51,3 +51,5 @@ console.log(add(3,4));
 const myArray = [2,5,6,8,9,0]
 myArray.forEach(function() {})  //forEach loop hai
 myArray.forEach(() => {})    //Bs syntax smjh rhe
+
+//Arrow function aur normal functions me antr ye hai ki normal functions me apn function keyword ka use krte hai jbki arrow me => ka use krte hai aur arrow function me this ki lexical scoping alg hoti hai
