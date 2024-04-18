@@ -36,5 +36,15 @@
     newli.textContent=  "Mojo"  //textContent innerHTML jaisa hi hota hai
     secondLang.replaceWith(newli) //Python change hoke Mojo ho gya
 
+    //Another edit example
+    //Replace JavaScript with TypeScript
+    const firstLang= document.querySelector("li:first-child")
+    firstLang.outerHTML= '<li>TypeScript</li>'
+
+    //remove
+    //remove GoLang
+    const lastLang= document.querySelector('li:last-child')
+    lastLang.remove()
+
 </script>
 </html>
