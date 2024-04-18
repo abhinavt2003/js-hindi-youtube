@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code</title>
+</head>
+<body style="background-color: black; color:aquamarine">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent=document.querySelector('.parent')
+    //console.log(parent);
+    //console.log(parent.children)  //HTML Collection milega
+    //console.log(parent.children[1].innerHTML);
+    for(let i=0;i<parent.children.length;i++){
+        console.log(parent.children[i].innerHTML)
+    }
+    parent.children[1].style.color= "orange"
+    //console.log(parent.firstElementChild) //Targeted element ka first value de dega
+    //console.log(parent.lastElementChild) //Targeted element ka last value de dega
+    
+    const day1= document.querySelector('.day')
+    //console.log(day1)
+    //console.log(day1.parentElement) //day1 ka parent element btaega
+    //console.log(day1.nextElementSibling) //next close 
+
+    console.log("NODES: ",parent.childNodes) //Mon,Tue nhi hota bss, hr ek element bhot complex hota hai even linebreak ko bhi element manta hai, Line break ek baar count krta hai hr element ke baad, React me manipulation child nodes se hi krte hai 
+    
+</script>
+</html>
