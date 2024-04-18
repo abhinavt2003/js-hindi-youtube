@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code</title>
+</head>
+<body style="background-color: black; color: white">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+        const li= document.createElement('li')
+        li.innerHTML= `${langName}` //Pura trversing hoti hai
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage('Python')
+    addLanguage('Typescript')
+
+    //Optimised approach
+    //Isme pura tree traverse nhi krna pd rha hai
+    //Bde projects me ye method use kre
+    function addOptiLanguage(langName){
+        const li= document.createElement('li')
+        li.appendChild(document.createTextNode(langName)) 
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('Go Lang')
+
+    //Edit the values
+    const secondLang=document.querySelector("li:nth-child(2)")
+    //secondLang.innerHTML= "Mojo"   //Not optimised
+    const newli = document.createElement('li')
+    newli.textContent=  "Mojo"  //textContent innerHTML jaisa hi hota hai
+    secondLang.replaceWith(newli) //Python change hoke Mojo ho gya
+
+</script>
+</html>
