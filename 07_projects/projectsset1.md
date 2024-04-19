@@ -7,6 +7,7 @@
 
 ## Project 1
 
+``` javascript
 const buttons=document.querySelectorAll('.button')
 const body= document.querySelector('body');
 
@@ -32,3 +33,38 @@ buttons.forEach(function(button){
     }
   }) 
 })
+```
+
+``` javascript
+## Project 2
+
+const form = document.querySelector('form')
+//Event mera submit hoga, form me submit hone se values server p chli jaati ye default action ko bhi hm event se alter kr skte hai
+
+// const height=parseInt(document.querySelector('#height').value)
+//This usecase will give you empty value
+form.addEventListener('submit',function(e){
+  e.preventDefault()
+
+  const height=parseInt(document.querySelector('#height').value)//string value mila jisse hm int me parse kr lie hai
+  const weight=parseInt(document.querySelector('#weight').value) //agr isko phle likhte to height,weight me empty value pass ho jaati
+  const results=document.querySelector('#results')
+  if(height=== '' || height < 0 || isNaN(height)){
+    results.innerHTML = `Please give valid height ${height}`;
+  }else if(weight=== '' || weight < 0 || isNaN(weight)){
+    results.innerHTML = `Please give valid weight ${weight}`;
+  }else{
+    const BMI= (weight/((height*height)/10000)).toFixed(2)
+    //Show the result
+    if(BMI>18 && BMI<25){
+      results.innerHTML= `<span>BMI:${BMI} Healthy person</span>`
+    }
+    else if(BMI<18){
+      results.innerHTML= `<span>BMI:${BMI} UnderWeight</span>`
+    }
+    else{
+      results.innerHTML= `<span>BMI:${BMI} OverWeight</span>`
+    }
+  }
+});
+```
