@@ -68,3 +68,22 @@ form.addEventListener('submit',function(e){
   }
 });
 ```
+
+## Project 3
+``` javascript
+const clock=document.getElementById('clock')
+//OR
+// const clock= document.querySelector('#clock')
+
+
+//Mujhe hr moment p time chahie mtlb hr baar method run ho
+
+//Event for setting interval after which program will continuosly run
+setInterval(function(){
+  let date= new Date()
+  // console.log(date.toLocaleTimeString())
+  clock.innerHTML = date.toLocaleTimeString()
+},1000) //Isko aise hi likhna interview me puchta hai
+
+
+```
