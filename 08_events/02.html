@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    setTimeout(function(){
+        //console.log("Hitesh");
+    },2000) //2 sec ka time do fir kuch kaam krenge
+
+    setInterval(function(){
+        //console.log("Abhinav")
+    },2000) //Mujhe ek interval do mai iss interval k baad baar baar values print krunga
+
+    const sayHitesh= function(){
+        //console.log("Hitesh");
+    }
+
+    const changeText= function(){
+        document.querySelector('h1').innerHTML= "Best JS series"
+    }
+    const changeMe= setTimeout(changeText,4000) //Handler hai to reference dijiega () ki jrurat nhi hai
+    //Rokna bhi pdega
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log("Stop")
+    })
+   
+
+</script>
+</html>

@@ -88,7 +88,7 @@ setInterval(function(){
 
 ```
 
-## Project 4
+## Project 4 ->Guess My Number
 
 ```javascript
 let randomNumber=parseInt(Math.random()*100 +1)
@@ -193,4 +193,64 @@ function newGame(){
     playGame=true
   })
 }
+```
+
+## Project 5 -> Unlimited Color
+``` javascript
+
+//generate a random color
+
+const randomColor= function(){
+  const hex= "0123456789ABCDEF"
+  let color= '#'
+  for(let i=0;i<6;i++){
+    color+= hex[Math.floor(Math.random() *10)]
+  }
+  return color;
+}
+
+//continuosly chalega
+
+let intervalID;  
+const startChangingColor= function(){
+  if(intervalID == null){
+    intervalID= setInterval(changeBgColor,1000)
+  }
+  function changeBgColor(){
+    document.body.style.backgroundColor= randomColor()
+  }
+}
+const stopChangingColor= function(){
+  clearInterval(intervalID);
+  intervalID= null; //Ab ye intervalID ka kaam khtm ho gya to isse flush out krna acchi practice hao 
+}
+
+document.querySelector('#start').addEventListener('click',startChangingColor)
+document.querySelector('#stop').addEventListener('click',stopChangingColor)
+```
+
+## Project 6 -> Keyboard input checker
+
+``` javascript
+
+const insert= document.getElementById('insert')
+
+window.addEventListener('keydown',(e) => {
+    insert.innerHTML= `
+    <div class="color">
+        <table>
+        <tr>
+          <th>Key</th>
+          <th>Key Code</th>
+          <th>Code</th>
+        </tr>
+        <tr>
+          <td>${e.key===' '?"Space": e.key}</td>
+          <td>${e.keyCode}</td>
+          <td>${e.code}</td>
+        </tr>
+      </table>
+    </div>
+    `;
+});
 ```
