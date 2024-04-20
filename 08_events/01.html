@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    //JavaScript me generally events sequencially run hote hai, kuch exeptions bhi hai
+    //Browser ke events bhi ek exception jo ki activity pr invoke hote hai
+    //document.getElementById('owl').onclick= function(){  //Ye method bhi thik hai pr ye features bhot km deta hai 
+    //    alert("owl clicked")
+    //}
+
+     //Another approach
+    //attachEvent()
+    //jQuery() - on event listener
+
+    //Best Approach
+    //document.getElementById('owl').addEventListener('click',function(e){
+    //    console.log(e)
+    //},false) //Teesra parameter bhi hota hai false/true(Event Propagation), Kai baar interview me bina false/ true likhe application run hi nhi hogi
+
+    //type, timeStamp, defaultPrevented
+    //target, toElement, srcElement, currentTarget
+    //clientX, clientY, screenX, screenY
+    //altkey, ctrlkey, shiftkey, keycode
+
+    //Event Propagation--> Event Bubbling , Event Capturing
+
+    //document.getElementById('images').addEventListener('click',function(){
+    //    console.log("clicked inside the ul")
+    //},false)  // Jb tm ul k andr click kroge to ye trigger hoga
+
+    //document.getElementById('owl').addEventListener('click',function(){
+    //    console.log("owl clicked")
+    //},false)  //Jb owl pr click kroge to ye trigger hoga
+//
+    ////Browser k andr dher saari photos pdi hai aur un photos me ek photo owl ki bhi hai. Jb hm kisi image p click krenge to "Click ul" aur owl p "Clicked owl" aayega. Ab event propagation jo ki third parameter hai usme agr false de denge to Event Bubbling work kregi mtlb maan lo aap owl p click kie to phle "Click Owl" then "Click Ul" print hoga. Agr true de die to Event Capturing hoga aur phle "Click ul" then "Click owl" print hoga.
+//
+    ////Maan lo hm chah rhe hai ki inner element p bubbling na ho aur outer p ho
+    //document.getElementById('owl').addEventListener('click',function(e){
+    //    e.stopPropagation()
+    //},false)
+//
+    ////Google ka link hai HTML uska default behavior change krna hai
+    //document.getElementById('google').addEventListener('click',function(e){
+    //    e.preventDefault()
+    //    e.stopPropagation()  //"Click inside the ul " nhi aayega isse 
+    //    console.log("Google clicked")
+    //},false)
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.parentNode.tagName)  //e.target -> kis target se event occur ho rha hai  //.parentNode kyunki agr hm sirf image hta dete hai to li wha reh jayega, To hm pura li htaunga
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id)
+            let removeIt= e.target.parentNode
+            removeIt.remove() //Phla approach
+        }
+        //EK aur tareeka
+        //removeIt.parentNode.removeChild(removeIt) //removeIt li de rha, li ka parent ul hai, aur ul ka child li delete ho jaega
+    },false)
+
+    //Ye program agr image p click krte ho to thik hai , Ab jaise google list item hai uspe click kroge to wo li hai uska parent ul hai aur phir pura ul delete ho jaega
+    //Iske lie checks lgane pdenege
+
+</script>
+</html>
