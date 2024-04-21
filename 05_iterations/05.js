@@ -13,7 +13,7 @@ const coding =["js","ruby","java","python","cpp"]
 // function printMe(item){
 //     console.log(item);
 // }
-// coding.forEach(printMe);  //parameters jaisa pass kr diye function
+// coding.forEach(printMe);  //parameters jaisa pass kr diye function(reference pass krna hai to () mt lgana)
 
 // coding.forEach( (item,index,arr)=> {  //Hm paramters me item,index,array bhi pass kr skte hai
 //     console.log(item,index,arr);

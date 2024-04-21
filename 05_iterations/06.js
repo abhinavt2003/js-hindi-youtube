@@ -1,10 +1,12 @@
 // const coding= ["js","ruby","java","python","cpp"]
 
 // const values = coding.forEach(  (item) =>{
-//     console.log(item);
-//     return item; //ye koi value return nhi krta hai
+    // console.log(item);
+    // return item; //ye koi value return nhi krta hai
 // } )
-// console.log(values);
+// console.log(values);  //undefined kyunki forEach loop kuch return nhi krta hai
+
+//Filter
 
 const myNums= [1,2,3,4,5,6,7,8,9,10]
 
@@ -13,7 +15,7 @@ const myNums= [1,2,3,4,5,6,7,8,9,10]
 // const newNums= myNums.filter( (nums) => (nums>4) )  //Ye condition ke hisaab se values fetch out krega
 
 // const newNums2 = myNums.filter( (num) =>{
-//     return num >4 //Yha return likhna hoga kyunki ye implicit declaration nhi hai
+//     return num >4        //Yha return likhna hoga kyunki ye implicit declaration nhi hai
 // } )
 
 // myNums.forEach(  (num) => {     //Alternative tareeka hai ye
@@ -40,4 +42,4 @@ const books= [
 let userBooks= books.filter( (bk) => (bk.publish>=1995))   //or const userBooks= books.filter( (bk) => { return bk.publish>=2000})
 userBooks= books.filter( (bk) => { return bk.publish>=1995 && bk.genre==="History"})
 
-console.log(userBooks);
+// console.log(userBooks);

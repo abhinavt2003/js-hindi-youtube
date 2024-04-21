@@ -47,7 +47,7 @@ form.addEventListener('submit',function(e){
   e.preventDefault()
 
   const height=parseInt(document.querySelector('#height').value)//string value mila jisse hm int me parse kr lie hai
-  const weight=parseInt(document.querySelector('#weight').value) //agr isko phle likhte to height,weight me empty value pass ho jaati
+  const weight=parseInt(document.querySelector('#weight').value) //agr isko phle global me likhte to height,weight me empty value pass ho jaati
   const results=document.querySelector('#results')
   if(height=== '' || height < 0 || isNaN(height)){
     results.innerHTML = `Please give valid height ${height}`;

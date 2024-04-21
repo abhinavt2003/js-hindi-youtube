@@ -1,4 +1,5 @@
 //Reduce method
+
 //Shopping cart bnane me help krta h
 //0 + 1 + 2 + 3 + 4 
 // const initialValue = 0
