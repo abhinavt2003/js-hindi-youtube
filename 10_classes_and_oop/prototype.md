@@ -1,0 +1,2 @@
+## Prototype
+JavaScript prototypical behaviour follow krta hai. Javascript ka prototypical bahaviour kbhi haar nhi maan agr usee koi values nhi mil rhi to wo ek layer upr jaake search krta hai jb tkk usko null na mil jaye.Arrow function me this ka access bhi prototype behaviour se hi nhi hota hai. Prototype hi hme new keyword aur classes ka access de rha hai. JavaScript prototypical inheritance krta hai mtlb ye prototype p prototype dhundhte jata hai.
