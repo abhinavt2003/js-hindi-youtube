@@ -27,16 +27,18 @@
 //Object based Syntax
 
 const User={
-    email: 'h@hc.com',
-    password: 'abc',
+    _email: 'h@hc.com',
+    _password: 'abc',
 
     get email(){
-        return this.email.toUpperCase()
+        return this._email.toUpperCase()
     },
     set email(value){
-        this.email= value;
+        this._email= value;
     }
 }
 
 const tea= Object.create(User)
-console.log(tea._email);
+console.log(tea.email);
+
+//ECMA2022 me # use kr rhe hai jisse us constructor k property ko override nhi kr skte hai, pr abhi ye futuristic cheez hai
