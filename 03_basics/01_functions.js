@@ -40,7 +40,7 @@ function addTwoNumbers(number1,number2){ //If we have to store it in other varia
 const result=addTwoNumbers(4,5)
 // console.log(result);
 
-function loginUserMessage(username= "Sam"){
+function loginUserMessage(username= "Sam"){ //Default value is "Sam" kuch nhi doge to Sam print krega
     if(username === undefined){ //Or if(!username)
         console.log("Pls enter username");
     }

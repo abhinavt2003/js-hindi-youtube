@@ -2,9 +2,9 @@
 
 //alert(3+3) // we are using node js not browser
 
-console.log(3
-    +3
-    ) ; console.log("abhinav") //Readability km ho jaegi //Code readability must be high
+// console.log(3
+//     +3
+    // ) ; console.log("abhinav") //Readability km ho jaegi //Code readability must be high
 
 let name="abhi"
 let age=18
@@ -23,5 +23,5 @@ let state;
 
 console.log(typeof null)  //Null ka type object hai
 console.log(typeof undefined)  //undefined ka undefined hi hai
-console.log(typeof age)
-console.log(typeof name)
+console.log(typeof age) //age ka number hai
+console.log(typeof name) //name ka string hai

@@ -1,8 +1,8 @@
 //Array
 
 const myarr= [0,1,2,3,4,5,true,"hitesh"] // JavaScript arrays are Resizable , can be of mixed type 
-const myArr= [0,1,2,3,4,5]  //Object , datatypes with collection of multiple items in a single variable
-// console.log(myArr[0]);  //Cannot write it as console.log(myArr["one"])
+const myArr= [0,1,2,3,4,5]              //Object , datatypes with collection of multiple items in a single variable
+// console.log(myArr[0]);               //Cannot write it as console.log(myArr["one"])
 //Whenver we do copy operations in Arrays it does form Shallow Copy
 //Shallow copy is a copy whose properties shares the same reference point
 //Means change in copy will be reflected in original

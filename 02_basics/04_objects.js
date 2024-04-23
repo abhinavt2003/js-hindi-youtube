@@ -103,7 +103,7 @@ navbar(company= "hitesh")
 //     price: "free"
 // }
 
-//Somrtimes we get API in the form of arrays too
+//Sometimes we get API in the form of arrays too
 [
     {},
     {},

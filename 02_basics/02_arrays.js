@@ -8,6 +8,7 @@ const dc_heroes= ["superman","flash","batman"]
 const allHeroes=marvel_heroes.concat(dc_heroes) //Returns a new array after concatenating
 // console.log(allHeroes);
 
+//Important //Destructuring of array
 //Spread operator
 //Isko yaad krne ke lie socho ek glass me paani hai ab glass gir jaega to paani spread ho jaega
 const all_new_heroes= [...marvel_heroes,...dc_heroes,...allHeroes] //No limitation for arguments can spread as many you want
@@ -15,9 +16,9 @@ const all_new_heroes= [...marvel_heroes,...dc_heroes,...allHeroes] //No limitati
 
 const another_array= [1,2,3,[4,5,6],7,[6,7],[4,5]]
 const real_another_array= another_array.flat(Infinity) //Infinity ki jgh actually hme jitne partitions h hme wo pass krna hota hai
-console.log(real_another_array); //Kai arrays k andr arrays ab flat ho jaega
+// console.log(real_another_array); //Kai arrays k andr arrays ab flat ho jaega
 
-//Jb hme kisi list ya kisi alg data structures ko hme array me convert krna ho kyunki wo easy hai
+//Jb hme kisi list ya kisi alg data structures ko hme array me convert krna ho kyunki array ko use krna easy hai
 console.log(Array.isArray("Abhinav")); //Checks whether given datatype is array
 console.log(Array.from("Abhinav")); //Converts any data type objects strings etc into array
 
